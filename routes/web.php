@@ -15,6 +15,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/products/{id}', 'ProductController@show'); //ver info de un producto
+Route::get('/categories/{category}', 'CategoryController@show'); //ver info de un producto
 
 Route::middleware(['auth'])->group(function () {
 	Route::post('/cart', 'CartDetailController@store'); //Agrega un nuevo carrito
@@ -39,8 +40,8 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->namespace('Admin')->group
 	Route::get('/categories', 'CategoryController@index'); //listado
 	Route::get('/categories/create', 'CategoryController@create'); //form crear
 	Route::post('/categories', 'CategoryController@store'); //grabar
-	Route::get('/categories/{id}/edit', 'CategoryController@edit'); //form edicion
-	Route::post('/categories/{id}/edit', 'CategoryController@update'); //actualizar
-	Route::delete('/categories/{id}', 'CategoryController@destroy'); //form eliminar
+	Route::get('/categories/{category}/edit', 'CategoryController@edit'); //form edicion
+	Route::post('/categories/{category}/edit', 'CategoryController@update'); //actualizar
+	Route::delete('/categories/{category}', 'CategoryController@destroy'); //form eliminar
 
 });

@@ -85,25 +85,27 @@
         </div>
 
         <div class="section text-center">
-            <h2 class="title">Categorias Disponibles</h2>
+            <h2 class="title">Productos Disponibles</h2>
 
             <div class="team">
                 <div class="row">
-                    @foreach ($categories as $category)
+                    @foreach ($products as $product)
                         <div class="col-md-4">
                             <div class="team-player">
-                                <img src="{{ $category->featured }}" alt="Imagen representativa de la categoria {{ $category->name }} " class="img-raised img-circle">
+                                <img src="{{ $product->featured }}" alt="Thumbnail Image" class="img-raised img-circle">
                                 <h4 class="title">
-                                    <a href="{{ url('categories/'.$category->id) }}">{{ $category->name }}</a>
+                                    <a href="{{ url('products/'.$product->id) }}">{{ $product->name }}</a>
                                     <br />
+                                    <!-- <small class="text-muted"> {{ $product->category->name }} </small> -->
+                                    <small class="text-muted"> {{ $product->nc }} </small>                                    
                                 </h4>
-                                <p class="description"> {{ $category->description }} </p>
+                                <p class="description"> {{ $product->description }} </p>
                             </div>
                         </div>
                     @endforeach
                 </div>
                 <div class="text-center" >
-                    {{ $categories->links() }}
+                    {{ $products->links() }}
                 </div>
             </div>
 
