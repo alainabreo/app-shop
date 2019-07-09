@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Bienvenid@ a App Shop')
+@section('title', 'Bienvenid@ a ' . config('app.name'))
 
 @section('body-class', 'landing-page')
 
@@ -70,7 +70,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h1 class="title">App-Shop</h1>
+                <h1 class="title">{{ config('app.name') }}</h1>
                 <h4>Tu forma fácil de hacer compras, entrega directa en tu domicilio o residencia.</h4>
                 <br />
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-danger btn-raised btn-lg">
@@ -86,7 +86,7 @@
         <div class="section text-center section-landing">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <h2 class="title">¿Por qué App Shop?</h2>
+                    <h2 class="title">¿Por qué {{ config('app.name') }}?</h2>
                     <h5 class="description">Puedes revisar nuestra relación completa de productos, comparar precios y realizar tus pedidos cuando estés seguro.</h5>
                 </div>
             </div>
