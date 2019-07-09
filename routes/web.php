@@ -13,9 +13,12 @@ Route::get('/prueba', function() {
 
 Auth::routes();
 
+Route::get('/search', 'SearchController@show'); //ver info de un producto
+Route::get('/products/json', 'SearchController@data'); //Carga la lista de productos en el campo search
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/products/{id}', 'ProductController@show'); //ver info de un producto
-Route::get('/categories/{category}', 'CategoryController@show'); //ver info de un producto
+Route::get('/categories/{category}', 'CategoryController@show'); //ver info de una categoria
 
 Route::middleware(['auth'])->group(function () {
 	Route::post('/cart', 'CartDetailController@store'); //Agrega un nuevo carrito
