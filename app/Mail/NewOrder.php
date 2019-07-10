@@ -36,7 +36,8 @@ class NewOrder extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.new-order')
-            ->subject('Un cliente ha realizado un nuevo pedido');
+        return $this->from('example@example.com')
+                    ->view('emails.new-order')
+                    ->subject('Un cliente ha realizado un nuevo pedido');
     }
 }
