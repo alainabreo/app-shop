@@ -82,6 +82,12 @@
                         </tbody>
                     </table>
 
+                    <hr>
+                    <p class="text-center">
+                        <strong>Total a pagar:</strong> $ {{ auth()->user()->cart->total }}
+                    </p>
+                    <hr>                    
+
                     <form method="post" action="{{ url('/order') }}">
                         {{ csrf_field() }}
                         
