@@ -162,31 +162,31 @@
                 <div class="col-md-8 col-md-offset-2">
                     <h2 class="text-center title">¿Aún no te has registrado?</h2>
                     <h4 class="text-center description">Regístrate ingresando tus datos básicos, y podrás realizar tus pedidos a través de nuestro carrito de compras. Si aún no te decides, de todas formas, con tu cuenta de usuario podrás hacer todas las consultas sin compromiso.</h4>
-                    <form class="contact-form">
+                    <form class="contact-form" method="get" action="{{ url('/register') }}">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Nombre</label>
-                                    <input type="email" class="form-control">
+                                    <input type="text" class="form-control" name="name">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Correo electrónico</label>
-                                    <input type="email" class="form-control">
+                                    <input type="email" class="form-control" name="email">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-group label-floating">
-                            <label class="control-label">Tu Mensaje</label>
-                            <textarea class="form-control" rows="4"></textarea>
-                        </div>
+                        <!-- <div class="form-group label-floating"> -->
+                            <!-- <label class="control-label">Tu Mensaje</label> -->
+                            <!-- <textarea class="form-control" rows="4"></textarea> -->
+                        <!-- </div> -->
 
                         <div class="row">
                             <div class="col-md-4 col-md-offset-4 text-center">
                                 <button class="btn btn-primary btn-raised">
-                                    Envíar consulta
+                                    Iniciar registro
                                 </button>
                             </div>
                         </div>
